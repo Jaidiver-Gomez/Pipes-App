@@ -12,7 +12,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative",
+//      "pre-commit": "lint-staged --relative",
+      "pre-commit": "ng lint",
       "pre-push": ""
     }
   },
