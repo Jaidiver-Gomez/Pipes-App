@@ -16,6 +16,11 @@
       "pre-push": ""
     }
   },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.2",
