@@ -1,1 +1,29 @@
-<p>numbers works!</p>
+<div class="text-layout">
+  <h1>Decimal and Percent Pipes</h1>
+  <p>Pipes for display numbers and percents</p>
+</div>
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="Net Sales" subheader="Current year">
+      <li>local:'es' <i class="pi pi-dollar"></i>{{ netSales + 12282.8484 | number: '1.2-2' }}</li>
+      <li>local:'en' <i class="pi pi-dollar"></i> {{ netSales + 12282.8484 | number: '1.2-2':'en' }}</li>
+      <li>local:'fr' <i class="pi pi-dollar"></i>{{ netSales + 12282.8484 | number: '1.2-2':'fr' }}</li>
+    </p-card>
+  </div>
+
+  <div class="p-col-4">
+    <p-card header="Gross Sales" subheader="Current year">
+      <li>{{ netSales + 2282.8484 | currency }}</li>
+      <li>{{ netSales + 2282.8484 | currency: 'USD' }}</li>
+      <li>{{ netSales + 2282.8484 | currency: 'EUR' }}</li>
+      <li>{{ netSales + 2282.8484 | currency: 'EUR':'symbol-narrow' }}</li>
+      <li>{{ netSales + 2282.8484 | currency: 'EUR':'symbol-narrow':'1.4-4':'fr' }}</li>
+    </p-card>
+  </div>
+
+  <div class="p-col-4">
+    <p-card header="Gross Sales" subheader="Perceptual Gains">
+      {{ percent | percent: '2.2-2' }}
+    </p-card>
+  </div>
+</div>

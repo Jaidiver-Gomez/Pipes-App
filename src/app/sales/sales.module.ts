@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PrimeNgModule } from '@app/prime-ng.module';
 import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NotCommonsComponent } from './pages/not-commons/not-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
@@ -9,7 +10,7 @@ const components = [NumbersComponent, NotCommonsComponent, BasicsComponent, Orde
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule],
+  imports: [CommonModule, PrimeNgModule],
   exports: [...components]
 })
 export class SalesModule {}
