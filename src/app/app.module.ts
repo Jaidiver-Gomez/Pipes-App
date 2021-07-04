@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { registerLocaleData } from '@angular/common';
 import localSpCo from '@angular/common/locales/es-CO';
-import localFr from '@angular/common/locales/Fr';
+import localFr from '@angular/common/locales/fr-CA';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '@shared/shared.module';
 import { AppRouterModule } from '@app/app-router.module';

@@ -1,5 +1,5 @@
 {
-  "singleQuote": true,
+  "singleQuote":true,
   "trailingComma": "none",
   "arrow-body-style": "off",
   "prefer-arrow-callback": "off",

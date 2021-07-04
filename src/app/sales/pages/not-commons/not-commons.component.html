@@ -6,23 +6,15 @@
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset [toggleable]="true" legend="i19nSelect Pipe">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+        Greetings {{ client.prefix }} {{ client.name }}, it is a great honor to
+        {{ client.prefix | i18nSelect: invitationMap }} you to our event.
       </p>
+      <button pButton class="p-button-help" label="Change Client" (click)="onChangeName()"></button>
     </p-fieldset>
   </div>
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset [toggleable]="true" legend="i19nPrural Pipe">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-      </p>
+      Actualmente {{ clients.length | i18nPlural: clientsMap }}.
     </p-fieldset>
   </div>
 </div>

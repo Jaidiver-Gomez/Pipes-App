@@ -1,20 +1,2 @@
 <app-menu></app-menu>
 <router-outlet></router-outlet>
-<div class="text-layout">
-  <h1>{{ name | titlecase }}</h1>
-  <h1>{{ value | number }}</h1>
-  <h1>{{ obj | json }}</h1>
-</div>
-
-<button
-  (click)="onChangeName()"
-  class="p-button-help"
-  icon="pi pi-bell"
-  iconPos="right"
-  label="Change name"
-  pButton
-></button>
-
-<p-card [header]="obj.name" [subheader]="title | titlecase">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonumy ut et</p>
-</p-card>

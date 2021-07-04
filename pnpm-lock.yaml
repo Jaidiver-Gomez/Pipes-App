@@ -27,6 +27,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-import: ^2.23.4
   eslint-plugin-prettier: ^3.4.0
+  eslint-plugin-unused-imports: ^1.1.2
   faker: ^5.5.3
   husky: ^6.0.0
   jasmine-core: ~3.7.0
@@ -80,6 +81,7 @@ devDependencies:
   eslint-config-prettier: 8.3.0_eslint@7.28.0
   eslint-plugin-import: 2.23.4_eslint@7.28.0
   eslint-plugin-prettier: 3.4.0_441ef98f5280b4c825fe505e43fc5698
+  eslint-plugin-unused-imports: 1.1.2
   husky: 6.0.0
   jasmine-core: 3.7.1
   karma: 6.3.3
@@ -3969,6 +3971,18 @@ packages:
       eslint-config-prettier: 8.3.0_eslint@7.28.0
       prettier: 2.3.1
       prettier-linter-helpers: 1.0.0
+    dev: true
+
+  /eslint-plugin-unused-imports/1.1.2:
+    resolution: {integrity: sha512-dfiCZiv/lSkOp6/JIjP+ASIs1vxLgiN1NISM+oxcO799+FEZQXy0Se1CaAHQt4BCInBOJ9LK0ILCe1lMMI+YGA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      eslint-rule-composer: 0.3.0
+    dev: true
+
+  /eslint-rule-composer/0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /eslint-scope/5.1.1:
