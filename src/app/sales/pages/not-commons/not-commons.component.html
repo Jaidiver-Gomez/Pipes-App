@@ -5,16 +5,57 @@
 <div class="p-grid">
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset [toggleable]="true" legend="i19nSelect Pipe">
-      <p>
+      <p *ngIf="client">
         Greetings {{ client.prefix }} {{ client.name }}, it is a great honor to
         {{ client.prefix | i18nSelect: invitationMap }} you to our event.
       </p>
-      <button pButton class="p-button-help" label="Change Client" (click)="onChangeName()"></button>
+      <button pButton (click)="onChangeName()" class="p-button-help">
+        {{ client ? 'Change/Add' : 'Add' + ' Client' }}
+      </button>
     </p-fieldset>
   </div>
+
   <div class="p-col p-md-6 p-sm-9">
     <p-fieldset [toggleable]="true" legend="i19nPrural Pipe">
-      Actualmente {{ clients.length | i18nPlural: clientsMap }}.
+      <p>Concurrently {{ clients.length | i18nPlural: clientsMap }}.</p>
+      <button pButton *ngIf="clients.length ?? undefined" (click)="onDeleteClient()" class="p-button-danger">
+        Delete Client
+      </button>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset [toggleable]="true" legend="Slice Pipe">
+      <b>Original</b>
+      <pre>{{ clients }}</pre>
+      <b>Slice:0:2</b>
+      <pre>{{ clients | slice: 0:2 }}<br></pre>
+      <b>Slice:2</b>
+      <pre>{{ clients | slice: 2 }}<br></pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset [toggleable]="true" legend="Json Pipe">
+      <pre>{{ clients | json }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset [toggleable]="true" legend="KeyValue Pipe">
+      <ul>
+        <li *ngFor="let item of client | keyvalue">
+          <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6 p-sm-9">
+    <p-fieldset [toggleable]="true" legend="Async Pipe">
+      <pre>{{ timer | async }}</pre>
+      <pre *ngIf="(promise | async) === null || undefined">Promise resolving...</pre>
+      <pre>{{ promise | async }}</pre>
     </p-fieldset>
   </div>
 </div>
