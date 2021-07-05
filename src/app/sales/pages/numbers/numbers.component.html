@@ -7,7 +7,7 @@
     <p-card header="Net Sales" subheader="Current year">
       <li>local:'es' <i class="pi pi-dollar"></i>{{ netSales + 12282.8484 | number: '1.2-2' }}</li>
       <li>local:'en' <i class="pi pi-dollar"></i> {{ netSales + 12282.8484 | number: '1.2-2':'en' }}</li>
-      <li>local:'fr' <i class="pi pi-dollar"></i>{{ netSales + 12282.8484 | number: '1.2-2':'fr' }}</li>
+      <li>local:'fr' <i class="pi pi-dollar"></i>{{ netSales + 12282.8484 | number: '1.2-2':'fr-CA' }}</li>
     </p-card>
   </div>
 
@@ -17,7 +17,7 @@
       <li>{{ netSales + 2282.8484 | currency: 'USD' }}</li>
       <li>{{ netSales + 2282.8484 | currency: 'EUR' }}</li>
       <li>{{ netSales + 2282.8484 | currency: 'EUR':'symbol-narrow' }}</li>
-      <li>{{ netSales + 2282.8484 | currency: 'EUR':'symbol-narrow':'1.4-4':'fr' }}</li>
+      <li>{{ netSales + 2282.8484 | currency: 'EUR':'symbol-narrow':'1.4-4':'fr-CA' }}</li>
     </p-card>
   </div>
 
