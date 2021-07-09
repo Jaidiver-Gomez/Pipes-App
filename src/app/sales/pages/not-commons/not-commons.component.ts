@@ -30,7 +30,7 @@ export class NotCommonsComponent {
   };
   //  Async Pipe
   timer = interval(1000); // 1,2,3
-  promise = new Promise((resolve, reject) => {
+  promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Promise data has been chargeed!');
     }, 3500);
